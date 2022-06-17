@@ -39,7 +39,7 @@ class Lecturer(Mentor):
         return f"Имя: {self.name}" + '\n' + f"Фамилия: {self.surname}" #clear + "\n" + f"Средняя оценка за лекции: {self.average_rating}"
 
     def average_rating(self):
-        for grade in self.grades:
+        for grade in (self.grades).key:
             summ += grade
             count += 1
         return summ / count
