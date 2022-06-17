@@ -39,13 +39,14 @@ print(best_student.grades)
 
 class Lecturer(Mentor):
     super().__init__()
-
-
-print("Hello world")
-
+    def __str__(self):
+        return f"Name: {self.__name}, Surname: {self.__surname}" 
 
 class Reviewer(Mentor):
     super().__init__()
+
+    def __str__(self):
+        return f"Name: {self.__name}, Surname: {self.__surname}" 
 
     def rate_hw(self, student, course, grade):
         if isinstance(student, Student) and course in self.courses_attached and course in student.courses_in_progress:
