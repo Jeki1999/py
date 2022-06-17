@@ -42,6 +42,8 @@ class Lecturer(Mentor):
     def __str__(self):
         return f"Name: {self.__name}, Surname: {self.__surname}" 
 
+    def average_rating(self):
+
 class Reviewer(Mentor):
     super().__init__()
 
